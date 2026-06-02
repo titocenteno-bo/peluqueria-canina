@@ -71,14 +71,34 @@ export default function Promotion() {
 
           {/* Claim promo action trigger block */}
           <div className="shrink-0 w-full lg:w-auto flex flex-col items-center">
-            <button
+            <motion.button
               id="promo-cta-claim"
               onClick={handlePromoClaim}
-              className="w-full sm:w-auto bg-white text-brand-charcoal hover:bg-brand-sand font-bold text-xs uppercase tracking-wider py-4 px-8 rounded-2xl transition-all shadow-xl hover:shadow-2xl active:scale-95 cursor-pointer flex items-center justify-center gap-2"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 25px rgba(34, 211, 238, 0.8), 0 0 50px rgba(52, 211, 153, 0.4)"
+              }}
+              whileTap={{ scale: 0.98 }}
+              animate={{
+                scale: [1, 1.02, 1],
+                boxShadow: [
+                  "0 10px 30px -10px rgba(0, 0, 0, 0.3)",
+                  "0 0 20px 4px rgba(34, 211, 238, 0.6), 0 0 30px 2px rgba(52, 211, 153, 0.3)",
+                  "0 10px 30px -10px rgba(0, 0, 0, 0.3)"
+                ]
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 2.2,
+                ease: "easeInOut"
+              }}
+              className="w-full sm:w-auto bg-gradient-to-b from-white to-slate-50 text-brand-charcoal hover:from-white hover:to-white font-extrabold text-xs uppercase tracking-wider py-4.5 px-9 rounded-2xl cursor-pointer flex items-center justify-center gap-2.5 border-2 border-emerald-400 relative overflow-hidden shadow-xl"
             >
-              <MessageCircle className="w-5 h-5 text-emerald-500 fill-emerald-500" />
-              <span>Quiero mi descuento</span>
-            </button>
+              <MessageCircle className="w-5 h-5 text-emerald-500 fill-emerald-500 shrink-0" />
+              <span className="font-extrabold font-sans text-brand-charcoal text-xs [text-shadow:0_1px_1px_rgba(255,255,255,0.8)]">
+                Quiero mi descuento
+              </span>
+            </motion.button>
             <span className="text-cyan-100 text-[10px] font-mono font-bold mt-2.5 tracking-wider uppercase">
               ¡Cupos limitados por semana!
             </span>
