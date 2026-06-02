@@ -207,28 +207,33 @@ export default function Services() {
           })}
         </div>
 
+        {/* Helpful swipe instruction guide only visible on mobile */}
+        <div className="md:hidden mt-12 mb-3 text-xs font-semibold text-brand-aqua flex items-center justify-center gap-1.5 animate-pulse">
+          <span>👈 Desliza para ver nuestros beneficios 👉</span>
+        </div>
+
         {/* Dynamic mini trust indicators under tables */}
-        <div className="mt-16 bg-brand-aqua/5 rounded-[28px] p-6 lg:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center border border-brand-aqua/10">
-          <div className="flex flex-col items-center">
-            <div className="bg-white text-brand-aqua p-3 rounded-full mb-3 shadow-md">
-              <ShieldCheck className="w-6 h-6" />
+        <div className="mt-4 flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 no-scrollbar md:grid md:grid-cols-3 md:gap-6 md:px-8 md:mx-0 md:pb-0 bg-transparent md:bg-brand-aqua/5 md:rounded-[28px] md:py-8 md:border md:border-brand-aqua/10">
+          <div className="shrink-0 w-[265px] snap-center md:w-auto md:shrink md:snap-align-none bg-white md:bg-transparent rounded-2xl p-5 md:p-0 shadow-md md:shadow-none border border-slate-100 md:border-none flex flex-col items-center text-center">
+            <div className="bg-brand-aqua/10 md:bg-white text-brand-aqua p-3 rounded-full mb-3 shadow-sm md:shadow-md">
+               <ShieldCheck className="w-6 h-6" />
             </div>
-            <h4 className="text-xs font-extrabold text-brand-charcoal uppercase tracking-wider mb-1">Cosméutica Natural</h4>
-            <p className="text-[11px] text-slate-600 font-medium">Fórmulas botánicas hipoalergénicas sin parabenos ni químicos invasivos.</p>
+            <h4 className="text-xs font-extrabold text-brand-charcoal uppercase tracking-wider mb-1">Cosmética Natural</h4>
+            <p className="text-[11px] text-slate-600 font-medium leading-relaxed">Fórmulas botánicas hipoalergénicas sin parabenos ni químicos invasivos.</p>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-white text-brand-aqua p-3 rounded-full mb-3 shadow-md">
-              <Clock className="w-6 h-6" />
+          <div className="shrink-0 w-[265px] snap-center md:w-auto md:shrink md:snap-align-none bg-white md:bg-transparent rounded-2xl p-5 md:p-0 shadow-md md:shadow-none border border-slate-100 md:border-none flex flex-col items-center text-center">
+            <div className="bg-brand-aqua/10 md:bg-white text-brand-aqua p-3 rounded-full mb-3 shadow-sm md:shadow-md">
+               <Clock className="w-6 h-6" />
             </div>
             <h4 className="text-xs font-extrabold text-brand-charcoal uppercase tracking-wider mb-1">Ahorre tiempo</h4>
-            <p className="text-[11px] text-slate-600 font-medium">Llegas, lo recibimos y empezamos inmediatamente. Tu consentido no espera en jaulas.</p>
+            <p className="text-[11px] text-slate-600 font-medium leading-relaxed">Llegas, lo recibimos y empezamos inmediatamente. Tu consentido no espera en jaulas.</p>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-white text-brand-aqua p-3 rounded-full mb-3 shadow-md">
-              <Dumbbell className="w-6 h-6" />
+          <div className="shrink-0 w-[265px] snap-center md:w-auto md:shrink md:snap-align-none bg-white md:bg-transparent rounded-2xl p-5 md:p-0 shadow-md md:shadow-none border border-slate-100 md:border-none flex flex-col items-center text-center">
+            <div className="bg-brand-aqua/10 md:bg-white text-brand-aqua p-3 rounded-full mb-3 shadow-sm md:shadow-md">
+               <Dumbbell className="w-6 h-6" />
             </div>
             <h4 className="text-xs font-extrabold text-brand-charcoal uppercase tracking-wider mb-1">Peluqueros Capacitados</h4>
-            <p className="text-[11px] text-slate-600 font-medium">Formados en psicología canina para un manejo cariñoso y seguro.</p>
+            <p className="text-[11px] text-slate-600 font-medium leading-relaxed">Formados en psicología canina para un manejo cariñoso y seguro.</p>
           </div>
         </div>
 

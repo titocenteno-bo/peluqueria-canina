@@ -101,23 +101,26 @@ export default function Hero() {
               </button>
             </motion.div>
 
-            {/* Micro indicators of confidence under buttons */}
+            {/* Micro indicators of confidence under buttons (Styled as small elegant horizontal cards) */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-2 gap-x-6 gap-y-4 w-full border-t border-slate-100 pt-8"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full border-t border-slate-100 pt-8"
             >
               {trustIndicators.map((item, idx) => {
                 const Icon = item.icon;
                 return (
-                  <div key={idx} className="flex gap-3 items-start">
-                    <div className={`p-2 rounded-xl shrink-0 ${item.color}`}>
+                  <div 
+                    key={idx} 
+                    className="flex gap-3.5 items-center p-3 rounded-2xl bg-white border border-slate-100 hover:border-slate-200/80 shadow-[0_2px_8px_-3px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.08)] hover:scale-[1.015] transition-all duration-300"
+                  >
+                    <div className={`p-2.5 rounded-xl shrink-0 ${item.color} shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)]`}>
                       <Icon className="w-4 h-4" />
                     </div>
-                    <div>
-                      <h3 className="text-xs font-bold text-brand-charcoal">{item.label}</h3>
-                      <p className="text-[11px] text-slate-500 font-medium leading-tight">{item.desc}</p>
+                    <div className="min-w-0">
+                      <h3 className="text-xs font-bold text-brand-charcoal leading-tight">{item.label}</h3>
+                      <p className="text-[10px] sm:text-[10.5px] text-slate-500 font-semibold leading-tight mt-0.5">{item.desc}</p>
                     </div>
                   </div>
                 );
@@ -147,17 +150,6 @@ export default function Hero() {
                 
                 {/* Visual gradient overlay on image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-              </div>
-
-              {/* Floating physical informational badge card - Top Left */}
-              <div className="absolute -top-4 -left-4 bg-white/95 backdrop-blur shadow-xl rounded-2xl p-3 border border-slate-100 flex items-center gap-3 animate-bounce-slow">
-                <div className="bg-brand-mint text-white h-8 w-8 rounded-full flex items-center justify-center font-bold text-xs">
-                  ★
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Puntuación</p>
-                  <p className="text-xs font-extrabold text-brand-charcoal">4.9/5 Familias Felices</p>
-                </div>
               </div>
 
               {/* Floating physical informational badge card - Bottom Right */}

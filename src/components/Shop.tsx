@@ -7,6 +7,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ShoppingBag, ShoppingCart, MessageSquare, ArrowRight, ArrowLeft, Filter, Tag, Check, Award, Flame, Star } from 'lucide-react';
 
+import alqoImg from '../assets/images/alqo_dog_food_product_1780366551258.png';
+
 interface ProductItem {
   id: string;
   name: string;
@@ -38,7 +40,7 @@ const BOUTIQUE_PRODUCTS: ProductItem[] = [
     description: 'Nutrición andina holística y de alta digestibilidad. 100% libre de gluten.',
     longDescription: 'Elaborado con cordero de pastura altiplánica y Quinua Real boliviana para un pelaje radiante y fuerte digestión. Recomendado para perritos con alergias alimentarias u olores corporales fuertes.',
     price: 130,
-    imageUrl: 'https://images.unsplash.com/photo-1589723930437-53c530e45b61?auto=format&fit=crop&q=80&w=500',
+    imageUrl: alqoImg,
     rating: 5
   },
   {

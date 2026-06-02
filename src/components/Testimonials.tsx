@@ -3,21 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { Star, MessageCircle, Heart, ShieldCheck, Quote, ChevronDown, ChevronUp } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import React from 'react';
+import { Star, MessageCircle, Heart, Quote } from 'lucide-react';
+import { motion } from 'motion/react';
 import { TESTIMONIALS } from '../data';
 
 export default function Testimonials() {
-  const [expandedId, setExpandedId] = useState<string | null>(null);
-
   const handleBooking = () => {
     const text = encodeURIComponent('¡Hola Spa Canino Miraflores! Vi las opiniones de las familias en la Boutique/Spa. Quisiera agendar un turno para mi mascota. 🐾💖');
     window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
-  };
-
-  const toggleReply = (id: string) => {
-    setExpandedId(expandedId === id ? null : id);
   };
 
   return (
@@ -46,8 +40,6 @@ export default function Testimonials() {
         {/* Card Grid Layout replacing long chat bubble, saves massive vertical space, clean and dense */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t, index) => {
-            const isReplyExpanded = expandedId === t.id;
-            
             // Assign custom soft colors to card borders/badges to make it playful
             const borderColors = [
               'hover:border-brand-coral/40',
@@ -96,7 +88,7 @@ export default function Testimonials() {
 
                 {/* Author profile detail section */}
                 <div className="border-t border-slate-50 pt-4 mt-6">
-                  <div className="flex items-center gap-3.5 mb-3.5">
+                  <div className="flex items-center gap-3.5">
                     <img
                       src={t.avatarUrl}
                       alt={t.author}
@@ -113,36 +105,6 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Interactive Toggle for Spa Host Reply */}
-                  {t.replyText && (
-                    <div className="mt-2 text-left">
-                      <button
-                        onClick={() => toggleReply(t.id)}
-                        className="flex items-center gap-1 text-[10.5px] font-bold text-emerald-600 hover:text-emerald-700 select-none cursor-pointer"
-                      >
-                        <span>{isReplyExpanded ? 'Ocultar respuesta del Spa' : 'Ver respuesta de las estilistas'}</span>
-                        {isReplyExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
-                      </button>
-
-                      <AnimatePresence initial={false}>
-                        {isReplyExpanded && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="bg-emerald-50 border border-emerald-100 rounded-2xl p-3.5 mt-2.5 text-[11px] leading-relaxed text-slate-600 font-semibold"
-                          >
-                            <span className="text-emerald-800 font-extrabold text-[9.5px] uppercase tracking-wider block mb-1">
-                              💬 Estilistas de Spa Canino Miraflores:
-                            </span>
-                            "{t.replyText}"
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  )}
-
                 </div>
               </motion.div>
             );
