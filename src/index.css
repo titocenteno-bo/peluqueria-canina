@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-brand-mint: #2BC0A5; /* Vibrant alegre mint */
+  --color-brand-mint-light: #ECF8F6;
+  --color-brand-aqua: #23A9C7; /* Refined happy sky blue */
+  --color-brand-aqua-light: #EFF8FA;
+  --color-brand-sand: #FBF9F4;
+  --color-brand-sand-dark: #EDE7DC;
+  --color-brand-charcoal: #1E2D3D;
+  --color-brand-gold: #FFB01F; /* Fun happy sun gold */
+  --color-brand-coral: #FF6B53; /* Active fun coral pink */
+  --color-brand-coral-light: #FFF0EE;
+  --color-brand-honey: #FF9E2A; /* Warm energetic honey orange */
+  --color-brand-honey-light: #FFF6ED;
+  --color-brand-lavender: #8E59FF; /* Playful aromatherapy lavender purple */
+  --color-brand-lavender-light: #F4EFFF;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--color-brand-charcoal);
+    background-color: #FCFBF9; /* Ultra-warm elegant off-white foundation */
+  }
+
+  /* Soft and elegant scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FCFBF9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #E5DFC9;
+    border-radius: 9999px;
+    border: 3px solid #FCFBF9;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #CBD5E1;
+  }
+}
