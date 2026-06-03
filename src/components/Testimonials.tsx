@@ -10,8 +10,8 @@ import { TESTIMONIALS } from '../data';
 
 export default function Testimonials() {
   const handleBooking = () => {
-    const text = encodeURIComponent('¡Hola Spa Canino Miraflores! Vi las opiniones de las familias en la Boutique/Spa. Quisiera agendar un turno para mi mascota. 🐾💖');
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent('¡Hola Nachis Pupis! Vi las opiniones de las familias en la Boutique/Spa. Quisiera agendar un turno para mi mascota. 🐾💖');
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   return (
@@ -119,7 +119,7 @@ export default function Testimonials() {
             </div>
           </div>
           <h3 className="font-serif text-lg font-bold text-brand-charcoal mb-1">
-            ¿Quieres vivir la mejor experiencia para tu perrito?
+            ¿Quieres vivir la mejor experiencia para tu mascota?
           </h3>
           <p className="text-slate-500 text-xs font-semibold mb-4 leading-relaxed">
             Escríbenos para una evaluación cariñosa complementaria de piel y pelaje totalmente gratis.

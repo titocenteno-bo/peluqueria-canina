@@ -8,8 +8,8 @@ import { motion } from 'motion/react';
 
 export default function Promotion() {
   const handlePromoClaim = () => {
-    const text = encodeURIComponent('¡Hola Spa Canino Miraflores! Quiero reclamar mi descuento de primera visita para mi mascota. ¿Tienen disponibilidad de turnos? 🐾🎁');
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent('¡Hola Nachis Pupis! Quiero reclamar mi descuento de primera visita para mi mascota. ¿Tienen disponibilidad de turnos? 🐾🎁');
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   return (

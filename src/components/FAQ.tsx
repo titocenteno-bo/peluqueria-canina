@@ -16,8 +16,8 @@ export default function FAQ() {
   };
 
   const handleBooking = () => {
-    const text = encodeURIComponent('¡Hola Spa Canino Miraflores! Tengo unas dudas adicionales sobre las sesiones de spa. ¿Podrían resolverlas? 🐾');
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent('¡Hola Nachis Pupis! Tengo unas dudas adicionales sobre las sesiones de estética. ¿Podrían resolverlas? 🐾');
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   return (

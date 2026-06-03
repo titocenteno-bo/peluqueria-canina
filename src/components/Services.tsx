@@ -32,8 +32,8 @@ export default function Services() {
 
   const handleServiceInquiry = (serviceName: string) => {
     const sizeStr = sizeLabels.find((s) => s.id === activeSize)?.label || activeSize;
-    const text = encodeURIComponent(`¡Hola! Quisiera reservar el servicio "${serviceName}" para mi perrito de tamaño "${sizeStr}". ¿Qué fecha y hora tienen disponibles? 🐾✨`);
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent(`¡Hola! Quisiera reservar el servicio "${serviceName}" para mi mascota de tamaño "${sizeStr}". ¿Qué fecha y hora tienen disponibles? 🐾✨`);
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   return (
@@ -49,7 +49,7 @@ export default function Services() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-xs font-bold tracking-[0.2em] text-[#248DA6] uppercase mb-3">La Colección de Aromaterapia & Belleza</p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-[42px] leading-tight font-bold text-brand-charcoal mb-4">
-            Tratamientos Diseñados Especiales
+            Para Perros o Gatos: Tratamientos Diseñados Especiales
           </h2>
           <p className="text-slate-600 font-medium text-sm md:text-base mb-10">
             Ofrecemos rituales completos que nutren la salud dermo-capilar y restauran la tranquilidad natural de tu mascota.
@@ -144,9 +144,13 @@ export default function Services() {
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-brand-charcoal mb-2">
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-brand-charcoal mb-1">
                     {service.name}
                   </h3>
+                  
+                  <div className="flex items-center gap-1.5 text-[9.5px] font-black text-teal-800 uppercase tracking-wider mb-3">
+                    <span className="bg-brand-mint-light px-2.5 py-1 rounded-md">Para Perro y Gato 🐾</span>
+                  </div>
                   
                   <p className="text-slate-500 font-medium text-xs leading-relaxed mb-6">
                     {service.description}
@@ -164,7 +168,7 @@ export default function Services() {
                       </span>
                     </div>
                     <span className="text-[10px] font-bold text-slate-400 mt-1 block uppercase tracking-wide">
-                      *Precio estimado para perro {sizeLabels.find((s) => s.id === activeSize)?.label.toLowerCase()}
+                      *Precio estimado según tamaño de mascota ({sizeLabels.find((s) => s.id === activeSize)?.label.toLowerCase()})
                     </span>
                   </div>
 

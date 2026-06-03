@@ -6,7 +6,7 @@
 import { TimelineStep, SpaService, BeforeAfterItem, TestimonialItem, FaqItem } from './types';
 
 // Importing generated premium assets
-import spaHeroImg from './assets/images/spa_hero_dog_1780358278056.png';
+import spaHeroImg from './assets/images/spa_dog_and_cat_hero_1780494326040.png';
 import beforeAfterImg from './assets/images/before_after_dog_1780358291652.png';
 import spaBathImg from './assets/images/spa_bath_dog_1780358303509.png';
 
@@ -40,7 +40,7 @@ export const TIMELINE_STEPS: TimelineStep[] = [
     stepNumber: 3,
     title: 'Secado Silencioso a Mano',
     description: 'Secado sin cabinas ruidosas. Utilizamos turbinas ultra silenciosas para evitar el estrés y toallas de algodón egipcio.',
-    details: 'Acariciamos a tu perrito mientras secamos su pelaje a velocidad media y temperatura controlada. Jamás usamos jaulas-secadoras comerciales, que causan pánico y sobrecalentamiento.',
+    details: 'Acariciamos a tu mascota mientras secamos su pelaje a velocidad media y temperatura controlada. Jamás usamos jaulas-secadoras comerciales, que causan pánico y sobrecalentamiento.',
     duration: '25 min',
     iconName: 'Wind'
   },
@@ -48,8 +48,8 @@ export const TIMELINE_STEPS: TimelineStep[] = [
     id: 'step-4',
     stepNumber: 4,
     title: 'Corte de Autor o Deslanado',
-    description: 'Estilismo adaptado a la morfología de la raza, respetando siempre el bienestar natural del pelaje canino.',
-    details: 'A cargo de estilistas certificados. Ya sea un corte clásico de raza, un arreglo higiénico o la remoción segura del subpelo muerto (deslanado) para que su piel respire libremente en el clima de La Paz.',
+    description: 'Estilismo adaptado a la morfología de la raza, respetando siempre el bienestar natural del pelaje de tu mascota.',
+    details: 'A cargo de estilistas certificados. Ya sea un corte clásico de raza o especie, un arreglo higiénico o la remoción segura del subpelo muerto (deslanado) para que su piel respire libremente en el clima de La Paz.',
     duration: '45 min',
     iconName: 'Scissors'
   },
@@ -72,7 +72,7 @@ export const SPA_SERVICES: SpaService[] = [
     priceMedium: 95,
     priceLarge: 125,
     highlightText: 'Brillo y Aromaterapia',
-    description: 'El mantenimiento ideal para mantener su manto radiante, limpio y libre de nudos entre cortes.',
+    description: 'Para Perros y Gatos: El mantenimiento ideal para mantener su manto radiante, limpio y libre de nudos entre cortes.',
     benefits: [
       'Análisis dermocapilar preliminar',
       'Baño relajante con shampoo selecto',
@@ -91,10 +91,10 @@ export const SPA_SERVICES: SpaService[] = [
     priceMedium: 140,
     priceLarge: 180,
     highlightText: 'La Experiencia Consentida',
-    description: 'Diseño de corte profesional para lucir increíble y un nivel extra de relajación hidrotérmica.',
+    description: 'Para Perros y Gatos: Diseño de corte profesional para lucir increíble y un nivel extra de relajación hidrotérmica.',
     benefits: [
       'Todo lo incluido en el Baño Esencial',
-      'Corte de raza completo o corte higiénico',
+      'Corte de raza completo o corte higiénico o estilización felina',
       'Vaciado de glándulas anales (opcional)',
       'Hidratación con mascarilla de keratina',
       'Doble baño con agua tibia microfiltrada',
@@ -110,13 +110,13 @@ export const SPA_SERVICES: SpaService[] = [
     priceMedium: 210,
     priceLarge: 260,
     highlightText: 'Salud Capilar Avanzada',
-    description: 'El tratamiento idóneo para mudar el pelo de forma controlada y nutrir intensamente las capas de la piel.',
+    description: 'Para Perros y Gatos: El tratamiento idóneo para mudar el pelo de forma controlada y nutrir intensamente las capas de la piel.',
     benefits: [
       'Todo lo incluido en el Spa Completo',
       'Tratamiento de Deslanado Termo-Activo',
       'Mascarilla de nutrición profunda con Aloe Vera',
       'Tratamiento de cuidado de almohadillas con cera protectora',
-      'Cepillado dental preventivo con pasta canina',
+      'Cepillado dental preventivo / higiene adaptada',
       'Pañuelo o lazo de diseño artesanal'
     ],
     isPopular: false,
@@ -178,7 +178,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-1',
     question: '¿Cómo puedo agendar una reserva para mi mascota?',
-    answer: 'Es súper fácil. Haz clic en cualquiera de nuestros botones de WhatsApp. Te responderemos de inmediato para confirmar el tamaño de tu perrito, coordinar el día y hora que mejor te convenga y reservar su espacio en el spa.'
+    answer: 'Es súper fácil. Haz clic en cualquiera de nuestros botones de WhatsApp. Te responderemos de inmediato para confirmar el tipo de mascota (perro o gato) y su tamaño, coordinar el día y hora que mejor te convenga y reservar su espacio en el spa.'
   },
   {
     id: 'faq-2',
@@ -192,17 +192,17 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: 'faq-4',
-    question: '¿Atienden perritos de todos los tamaños y razas?',
-    answer: '¡Absolutamente! Atendemos desde pequeñitos (Chihuahuas, Poodles Toy, Yorkies) hasta gigantes bonachones (Golden Retrievers, Samoyedos, Berneses). Personalizamos las técnicas y el baño para la morfología propia de cada raza.'
+    question: '¿Atienden perros de todos los tamaños y también gatos?',
+    answer: '¡Absolutamente! En perros atendemos desde los más pequeñitos (Chihuahuas, Poodles Toy) hasta gigantes bonachones (Golden Retrievers, Samoyedos). Y en gatos, recibimos todas las razas y mestizos con un ambiente relajado, libre de ruidos estresantes y con un trato ultra cariñoso y especializado.'
   },
   {
     id: 'faq-5',
     question: '¿Cuánto tiempo tarda la experiencia completa del spa?',
-    answer: 'El servicio regular dura entre 1 hora (para baños esenciales en perros pequeños) y hasta 2.5 horas para spas completos con deslanado en perros grandes. Priorizamos la calma y paciencia, respetando sus tiempos emocionales sin apresuramientos.'
+    answer: 'El servicio regular dura entre 1 hora (para baños esenciales en mascotas pequeñas) y hasta 2.5 horas para spas completos con deslanado en mascotas grandes. Priorizamos la calma y paciencia, respetando sus tiempos emocionales sin apresuramientos.'
   },
   {
     id: 'faq-6',
     question: '¿Puedo quedarme a ver a mi mascota durante la sesión?',
-    answer: '¡Claro que sí! Contamos con una hermosa zona de recepción vidriada y un cafecito de cortesía donde puedes relajarte mientras vigilas cómo consentimos a tu mejor amigo. De todas formas, la mayoría de los perritos se comporta de forma más tranquila cuando su dueño no está en su campo visual directo, ya que tienden a sobreexcitarse buscando protegerlos.'
+    answer: '¡Claro que sí! Contamos con una hermosa zona de recepción vidriada y un cafecito de cortesía donde puedes relajarte mientras vigilas cómo consentimos a tu mejor amigo. De todas formas, la mayoría de las mascotas (perros y gatos) se comporta de forma más tranquila cuando su dueño no está en su campo visual directo, ya que tienden a sobreexcitarse buscando protegerlos o llamar su atención.'
   }
 ];

@@ -24,8 +24,8 @@ export default function SpaExperience() {
   const SelectedIcon = iconMap[selectedStep.iconName] || Sparkles;
 
   const handleBooking = () => {
-    const text = encodeURIComponent('Hola Spa Canino Miraflores, me encantaría agendar un día de spa especial para mi perrito. Me llamó la atención el recorrido interactivo de 5 pasos. 🐾');
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent('¡Hola Nachis Pupis! Me encantaría agendar un día de spa especial para mi mascota. Me llamó la atención el recorrido interactivo de 5 pasos. 🐾');
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   return (

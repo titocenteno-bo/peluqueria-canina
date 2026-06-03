@@ -10,12 +10,12 @@ import { ASSETS } from '../data';
 export default function Ubicacion() {
   const handleDirections = () => {
     // Elegant redirect to Miraflores, La Paz, Bolivia searching
-    const url = 'https://www.google.com/maps/search/?api=1&query=Spa+Canino+Miraflores+La+Paz+Bolivia';
+    const url = 'https://www.google.com/maps/search/?api=1&query=Nachis+Pupis+Miraflores+La+Paz+Bolivia';
     window.open(url, '_blank');
   };
 
   const handlePhoneCall = () => {
-    window.open('tel:+59177465774');
+    window.open('tel:+59176756381');
   };
 
   return (
@@ -79,7 +79,7 @@ export default function Ubicacion() {
                   <div>
                     <h4 className="text-xs font-black text-brand-charcoal uppercase tracking-wider mb-0.5">Teléfono & WhatsApp</h4>
                     <p className="text-xs sm:text-sm text-slate-700 font-extrabold leading-relaxed">
-                      +591 77465774
+                      +591 76756381
                     </p>
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mt-0.5">
                       CON ATENCIÓN RÁPIDA DE RESERVAS
@@ -107,7 +107,7 @@ export default function Ubicacion() {
                 className="bg-white hover:bg-brand-sand text-brand-charcoal border-2 border-slate-200 font-bold text-xs uppercase tracking-wider py-4 px-8 rounded-2xl transition-all cursor-pointer flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-emerald-500" />
-                <span>Llamar al 77465774</span>
+                <span>Llamar al 76756381</span>
               </button>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function Ubicacion() {
             >
               <img
                 src={ASSETS.spaBath}
-                alt="Detalle de tina de hidroterapia en Spa Canino Miraflores con perrito Corgi feliz"
+                alt="Detalle de tina de hidroterapia en Nachis Pupis con mascota feliz"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 referrerPolicy="no-referrer"
               />

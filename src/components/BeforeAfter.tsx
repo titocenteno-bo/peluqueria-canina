@@ -10,10 +10,12 @@ import { ASSETS } from '../data';
 
 // Import newly generated high-fidelity same-dog before and after images
 import miloImg from '../assets/images/milo_poodle_before_after_1780360865086.png';
+import daphneImg from '../assets/images/calico_before_after_1780495032840.png';
 import simbaImg from '../assets/images/simba_pomeranian_before_after_1780360883568.png';
 import kiwiImg from '../assets/images/kiwi_schnauzer_before_after_1780360895705.png';
 import lunaImg from '../assets/images/luna_cocker_before_after_1780360910356.png';
 import ramonImg from '../assets/images/ramon_shihtzu_before_after_1780360930014.png';
+import cleoImg from '../assets/images/cat_before_after_1780494713854.png';
 
 // Expanded list of 5 real-life premium transformations in Miraflores
 interface TransformationItem {
@@ -51,6 +53,23 @@ const TRANSFORMATIONS: TransformationItem[] = [
       { id: 3, x: '82%', y: '68%', title: 'Lazo Boutique Sostenible', desc: 'Accesorio premium hipoalergénico artesanal de cortesía para coronar el look.' }
     ],
     accentClass: 'bg-brand-coral-light border-brand-coral text-brand-coral'
+  },
+  {
+    id: 't-7',
+    dogName: 'Dafne',
+    breed: 'Felina Cálico de Pelo Largo',
+    description: 'Dafne, una espectacular cálico, presentaba su manto tricolor bastante deslucido por acumulación de estática, nudos cerrados bajo las axilas y resecación dermo-capilar. Realizamos un spa completo con hidromasaje relajante, secado manual con chorro de aire tibio ultra-silencioso de baja emisión para evitar el estrés felino, y un deslanado manual de alta definición. Ahora luce sus tres colores radiantes, esponjosos y con un brillo único.',
+    compositeImage: daphneImg,
+    benefits: [
+      'Baño de nutrición lipídica para pelajes tricolores',
+      'Deslanado anti-estática de alta definición sin tirones',
+      'Secado libre de estrés con turbina acústicamente sellada'
+    ],
+    hotspots: [
+      { id: 14, x: '28%', y: '42%', title: 'Cuidado anti-estática', desc: 'Tratamiento acondicionador que repele el polvo y mantiene los tonos separados y nítidos.' },
+      { id: 15, x: '72%', y: '38%', title: 'Súper volumen y sedosidad', desc: 'Manto soplado e inflado manualmente con técnicas de aireación tibia respetuosa.' }
+    ],
+    accentClass: 'bg-brand-mint-light border-brand-mint text-brand-mint'
   },
   {
     id: 't-2',
@@ -119,6 +138,23 @@ const TRANSFORMATIONS: TransformationItem[] = [
       { id: 11, x: '78%', y: '58%', title: 'Corte Cachorro (Baby Cut)', desc: 'Iguala el vello corporal a una longitud cómoda y dócil.' }
     ],
     accentClass: 'bg-brand-coral-light border-brand-coral text-brand-coral'
+  },
+  {
+    id: 't-6',
+    dogName: 'Cleo',
+    breed: 'Felino Mestizo de Pelo Largo',
+    description: 'Cleo llegó con el pelaje extremadamente deslucido, nudos densos en el lomo y cierta timidez táctil habitual en felinos. Aplicamos nuestro exclusivo baño emoliente con extracto de caléndula, secado manual silencioso (cero jaula ni ruidos) y un cepillado de alta densidad. El resultado: un manto esponjoso, libre de nudos y una gatita súper relajada.',
+    compositeImage: cleoImg,
+    benefits: [
+      'Baño termal emoliente hidra-calmante',
+      'Remoción paciente e indolora de nudos',
+      'Secado a mano con turbina acústica ultra-silenciosa'
+    ],
+    hotspots: [
+      { id: 12, x: '25%', y: '45%', title: 'Eliminación suave de nudos', desc: 'Productos de dermo-cosmética que disuelven nudos densos sin tirones dolorosos.' },
+      { id: 13, x: '75%', y: '35%', title: 'Manto brillante y sedoso', desc: 'Cepillado y cardado profesional con cerdas extrasuaves de alta densidad.' }
+    ],
+    accentClass: 'bg-brand-lavender-light border-brand-lavender text-brand-lavender'
   }
 ];
 
@@ -165,8 +201,8 @@ export default function BeforeAfter() {
   };
 
   const handleBooking = (dogName: string) => {
-    const text = encodeURIComponent(`¡Hola Spa Canino Miraflores! Vi el cambio de imagen de ${dogName} en su web y me pareció espectacular. Me gustaría agendar una cita premium para consentir al mío. 🐕💈✨`);
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent(`¡Hola Nachis Pupis! Vi el cambio de imagen de ${dogName} en su web y me pareció espectacular. Me gustaría agendar una cita premium para consentir al mío. 🐕💈✨`);
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   const currentItem = TRANSFORMATIONS[currentIndex];
@@ -396,7 +432,7 @@ export default function BeforeAfter() {
                 className={`h-2.5 rounded-full transition-all cursor-pointer ${
                   currentIndex === dotIdx ? 'w-8 bg-brand-lavender' : 'w-2.5 bg-slate-300 hover:bg-slate-400'
                 }`}
-                aria-label={`Ir al perro ${dotIdx + 1}`}
+                aria-label={`Ir a la mascota ${dotIdx + 1}`}
               />
             ))}
           </div>

@@ -10,15 +10,15 @@ import { ASSETS } from '../data';
 
 export default function Hero() {
   const trustIndicators = [
-    { label: 'Atención personalizada', icon: Heart, desc: 'Un solo estilista por perrito', color: 'text-rose-500 bg-rose-50' },
+    { label: 'Atención personalizada', icon: Heart, desc: 'Un solo estilista por mascota', color: 'text-rose-500 bg-rose-50' },
     { label: 'Productos de calidad', icon: Award, desc: 'Línea orgánica dermo-cosmética', color: 'text-amber-500 bg-amber-50' },
     { label: 'Ambiente libre de estrés', icon: Shield, desc: 'Cero jaulas, música de relax', color: 'text-brand-mint bg-brand-mint-light' },
     { label: 'Más de 100 mascotas felices', icon: Smile, desc: 'En Miraflores, La Paz', color: 'text-brand-aqua bg-brand-aqua-light' },
   ];
 
   const handleBooking = () => {
-    const text = encodeURIComponent('¡Hola! Me encantaría reservar un día de spa para mi perrito. Quisiera saber horarios y precios. 🐾');
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent('¡Hola Nachis Pupis! Me encantaría reservar un turno de estética para mi mascota. Quisiera saber horarios y precios. 🐾');
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   const handleScrollToTransformations = (e: React.MouseEvent) => {
@@ -50,7 +50,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-brand-mint-light border border-brand-mint/20 text-teal-800 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6"
             >
               <Sparkles className="w-3.5 h-3.5 text-brand-mint fill-brand-mint" />
-              <span>EL PRIMER SPA CANINO CONCEPTUAL DE LA PAZ</span>
+              <span>SPA dedicado al cuidado de tus mascotas</span>
             </motion.div>
 
             <motion.h1
@@ -129,27 +129,24 @@ export default function Hero() {
           </div>
 
           {/* Graphic and Image panel (5 columns on large screen) */}
-          <div className="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center">
+          <div className="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center w-full">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, rotate: 1 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full max-w-[440px] aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5]"
+              className="relative w-full max-w-[440px]"
             >
-              {/* Main premium video container with organic rounded borders */}
-              <div className="absolute inset-0 bg-brand-sand border-4 border-white shadow-2xl rounded-[40px] overflow-hidden group">
-                <video
-                  src="https://assets.mixkit.co/videos/preview/mixkit-dog-running-in-the-park-44062-large.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
-                  poster={ASSETS.hero}
+              {/* Main premium image container with organic rounded borders containing both a dog and a cat */}
+              <div className="w-full aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] bg-brand-sand border-4 border-white shadow-2xl rounded-[40px] overflow-hidden group relative">
+                <img
+                  src={ASSETS.hero}
+                  alt="Perro y gato felices juntos en la estética premium Nachis Pupis"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
                 />
                 
                 {/* Visual gradient overlay on image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Floating physical informational badge card - Bottom Right */}

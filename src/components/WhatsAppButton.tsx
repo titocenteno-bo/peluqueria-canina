@@ -35,8 +35,8 @@ export default function WhatsAppButton() {
   }, []);
 
   const handleBookingClick = () => {
-    const text = encodeURIComponent('¡Hola Spa Canino Miraflores! Me encantaría agendar una cita premium para consentir a mi mascota de forma súper especial. ¿Tienen turnos disponibles? 🐾💈');
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent('¡Hola Nachis Pupis! Me encantaría agendar una cita premium para consentir a mi mascota de forma súper especial. ¿Tienen turnos disponibles? 🐾💈');
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   const handleScrollToTop = () => {
@@ -89,7 +89,7 @@ export default function WhatsAppButton() {
               <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">¡Reservas online disponibles!</p>
             </div>
             <p className="text-slate-600 text-xs font-semibold leading-relaxed">
-              ¿Quieres agendar un día de spa especial para tu perrito hoy mismo? Es en segundos.
+              ¿Quieres agendar un día de spa especial para tu mascota hoy mismo? Es en segundos.
             </p>
             <button
               onClick={handleBookingClick}

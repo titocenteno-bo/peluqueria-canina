@@ -3,14 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Sparkles, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const handleWhatsAppClick = () => {
-    const text = encodeURIComponent('¡Hola Spa Canino Miraflores! Me encantaría reservar un turno de spa premium para mi mascota. 🐾🚀');
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent('¡Hola Nachis Pupis! Me encantaría reservar un turno de spa premium para mi mascota. 🐾🚀');
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   return (
@@ -22,16 +23,14 @@ export default function Footer() {
           
           {/* Left Column Brand */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-3">
-            <div className="flex items-center gap-2">
-              <div className="bg-brand-mint/15 text-brand-mint p-2 rounded-xl flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-brand-mint fill-brand-mint" />
-              </div>
+            <div className="flex items-center gap-2.5">
+              <Logo className="w-14 h-14" showText={false} />
               <div>
-                <span className="font-serif text-lg font-bold tracking-tight text-white block">
-                  SPA CANINO
+                <span className="font-serif text-lg font-black tracking-tight text-white block leading-none">
+                  NACHIS PUPIS
                 </span>
-                <span className="text-[10px] font-bold tracking-[0.2em] text-brand-mint -mt-1 block">
-                  MIRAFLORES
+                <span className="text-[9.5px] font-extrabold tracking-[0.14em] text-brand-mint mt-1 block uppercase">
+                  Estética Canina y Felina
                 </span>
               </div>
             </div>
@@ -57,7 +56,7 @@ export default function Footer() {
               onClick={handleWhatsAppClick}
               className="text-brand-mint hover:text-white font-mono text-lg font-extrabold transition-colors cursor-pointer block"
             >
-              +591 77465774
+              +591 76756381
             </button>
             <p className="text-slate-400 text-xs font-semibold">
               Miraflores, La Paz, Bolivia
@@ -69,7 +68,7 @@ export default function Footer() {
         {/* Minimal Copyright and Agency Credits */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-center sm:text-left">
           <p className="text-[11px] text-slate-500 font-semibold tracking-wide">
-            © {currentYear} Spa Canino Miraflores. Todos los derechos reservados.
+            © {currentYear} Nachis Pupis. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-4 text-xs font-bold text-slate-400">
             <a href="#inicio" className="hover:text-brand-mint transition-colors">Volver arriba ↑</a>

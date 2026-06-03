@@ -38,7 +38,7 @@ const BOUTIQUE_PRODUCTS: ProductItem[] = [
     name: 'Alimento "Alqo" Cordero & Quinua Real (2kg)',
     category: 'Nutrición',
     description: 'Nutrición andina holística y de alta digestibilidad. 100% libre de gluten.',
-    longDescription: 'Elaborado con cordero de pastura altiplánica y Quinua Real boliviana para un pelaje radiante y fuerte digestión. Recomendado para perritos con alergias alimentarias u olores corporales fuertes.',
+    longDescription: 'Elaborado con cordero de pastura altiplánica y Quinua Real boliviana para un pelaje radiante y fuerte digestión. Recomendado para mascotas con alergias alimentarias u olores corporales fuertes.',
     price: 130,
     imageUrl: alqoImg,
     rating: 5
@@ -98,9 +98,9 @@ const BOUTIQUE_PRODUCTS: ProductItem[] = [
   },
   {
     id: 'p-8',
-    name: 'Gotas Relajantes "Paz Canina" (30ml)',
+    name: 'Gotas Relajantes "Paz Natural" (30ml)',
     category: 'Nutrición',
-    description: 'Extractos puros de Pasiflora y Valeriana para reducir el estrés del perrito.',
+    description: 'Extractos puros de Pasiflora y Valeriana para reducir el estrés de tu mascota.',
     longDescription: 'Suplemento líquido natural para calmar la ansiedad por ruidos fuertes, cohetes o tormentas en La Paz. No seda a tu mascota, simplemente estabiliza su sistema nervioso mediante hierbas biológicas.',
     price: 65,
     imageUrl: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=500',
@@ -130,8 +130,8 @@ export default function Shop({ onNavigateToBoutique, onNavigateToHome, isFullVie
   const displayedProducts = isFullView ? filteredProducts : BOUTIQUE_PRODUCTS.slice(0, 5);
 
   const handleOrder = (product: ProductItem) => {
-    const text = encodeURIComponent(`¡Hola Spa Canino Miraflores! Me encantaría adquirir el producto "${product.name}" (${product.price} Bs.) de su Boutique Canina. ¿Tienen disponibilidad de entrega o retiro hoy? 🐾🛍️`);
-    window.open(`https://wa.me/59177465774?text=${text}`, '_blank');
+    const text = encodeURIComponent(`¡Hola Nachis Pupis! Me encantaría adquirir el producto "${product.name}" (${product.price} Bs.) de su Boutique Premium. ¿Tienen disponibilidad de entrega o retiro hoy? 🐾🛍️`);
+    window.open(`https://wa.me/59176756381?text=${text}`, '_blank');
   };
 
   // Switch to Boutique virtual page transition
@@ -165,7 +165,7 @@ export default function Shop({ onNavigateToBoutique, onNavigateToHome, isFullVie
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="bg-brand-coral-light text-brand-coral font-bold text-[10px] uppercase tracking-[0.2em] py-1.5 px-4 rounded-full inline-flex items-center gap-1.5 mb-4">
               <ShoppingBag className="w-3.5 h-3.5 fill-brand-coral text-brand-coral" />
-              Boutique Canina Miraflores
+              Boutique Nachis Pupis
             </div>
             <h1 className="font-serif text-3xl sm:text-4xl md:text-[46px] leading-tight font-extrabold text-brand-charcoal mb-4">
               Consiente a tu peludo en casa.
